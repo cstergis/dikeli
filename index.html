@@ -73,7 +73,7 @@
         .hamburger { display: none; cursor: pointer; background: none; border: none; }
         .hamburger span { display: block; width: 25px; height: 2px; background: var(--text-dark); margin: 5px 0; transition: var(--transition); }
 
-        /* Hero Section - Ανέβασμα κειμένου πιο ψηλά με padding-bottom */
+        /* Hero Section */
         .hero { 
             position: relative; 
             height: 85vh; 
@@ -84,13 +84,8 @@
             align-items: center; 
             text-align: center; 
             color: var(--white); 
-            padding: 0 20px 100px 20px; /* Αυξήθηκε το κάτω padding για να ανέβει το κείμενο */
+            padding: 0 20px 100px 20px; 
             margin-bottom: 60px;
-        }
-        
-        .hero[style*="background-image"] {
-            background-size: cover;
-            background-position: center 30%;
         }
 
         .hero h1 { 
@@ -99,11 +94,7 @@
             letter-spacing: 4px; 
             margin-bottom: 18px; 
             color: #eceee6;
-            text-shadow: 
-                -1px -1px 1px rgba(255,255,255,0.4), 
-                1px 1px 1px rgba(0,0,0,0.75), 
-                2px 2px 3px rgba(0,0,0,0.7), 
-                4px 4px 18px rgba(0,0,0,0.65);
+            text-shadow: -1px -1px 1px rgba(255,255,255,0.4), 1px 1px 1px rgba(0,0,0,0.75), 2px 2px 3px rgba(0,0,0,0.7), 4px 4px 18px rgba(0,0,0,0.65);
             animation: fadeInDown 1.2s ease; 
         }
         .hero p { 
@@ -113,10 +104,7 @@
             letter-spacing: 3px; 
             text-transform: uppercase; 
             color: #eceee6;
-            text-shadow: 
-                -0.5px -0.5px 0.5px rgba(255,255,255,0.3), 
-                1px 1px 1px rgba(0,0,0,0.85), 
-                2px 2px 8px rgba(0,0,0,0.75);
+            text-shadow: -0.5px -0.5px 0.5px rgba(255,255,255,0.3), 1px 1px 1px rgba(0,0,0,0.85), 2px 2px 8px rgba(0,0,0,0.75);
             animation: fadeInUp 1.2s ease 0.3s; 
             animation-fill-mode: both; 
         }
@@ -137,7 +125,7 @@
         .intro-box { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
         .intro-text p { color: var(--stone-grey); font-size: 15.5px; margin-bottom: 22px; text-align: justify; font-weight: 400; }
 
-        /* Intro Logo Circular Style - ΑΦΑΙΡΕΘΗΚΕ ΤΟ HOVER EFFECT */
+        /* Intro Logo Circular Style */
         .intro-logo-wrapper { display: flex; justify-content: center; align-items: center; }
         .intro-circle { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 6px solid var(--bg-card); box-shadow: var(--shadow-md); display: flex; justify-content: center; align-items: center; background: var(--bg-card); }
         .intro-logo-img { width: 100%; height: 100%; object-fit: cover; }
@@ -180,12 +168,10 @@
 
         .scroller-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--gallery-transition); display: block; }
         
-        /* Hover Effects */
         .scroller-wrapper:hover .scroller-item { opacity: 0.7; transform: scale(0.97); }
         .scroller-wrapper .scroller-item:hover { opacity: 1; transform: scale(1.05); z-index: 10; box-shadow: var(--shadow-md); }
         .scroller-wrapper .scroller-item:hover img { transform: scale(1.02); }
 
-        /* Info Overlay πάνω στη φωτογραφία */
         .gallery-item-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 25px 15px 15px 15px; background: linear-gradient(transparent, rgba(58,61,50,0.85)); color: var(--white); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; gap: 10px; }
         .scroller-item:hover .gallery-item-overlay { opacity: 1; }
         .gallery-item-overlay span { font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; }
@@ -193,7 +179,6 @@
         /* Ενότητα Κρατήσεων */
         .booking-container-clean { background: var(--bg-card); padding: 50px; border-radius: 8px; border: 1px solid rgba(58, 61, 50, 0.08); box-shadow: var(--shadow-sm); max-width: 700px; margin: 0 auto; }
         
-        /* Φόρμα Στοιχείων Πελάτη & Λαδί Πεδία */
         .guest-inputs { display: flex; flex-direction: column; gap: 20px; }
         .form-group { display: flex; flex-direction: column; gap: 6px; }
         .form-group label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--stone-grey); letter-spacing: 0.5px; }
@@ -260,7 +245,7 @@
             .hamburger.active span:nth-child(2) { opacity: 0; }
             .hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 
-            .hero { padding: 0 20px 40px 20px; height: 75vh; } /* Προσαρμογή ύψους για κινητά */
+            .hero { padding: 0 20px 40px 20px; height: 75vh; }
             .hero h1 { font-size: 42px; letter-spacing: 2px; }
             .section-title { font-size: 28px; }
             .intro-box { grid-template-columns: 1fr; gap: 40px; }
@@ -333,7 +318,7 @@
             </div>
             <div class="intro-logo-wrapper">
                 <div class="intro-circle">
-                    <img src="logo.jpg" alt="Dikeli Logo Display" class="intro-logo-img" onerror="this.src='logo.jpeg'">
+                    <img src="logo.jpg" alt="Dikeli Logo" class="intro-logo-img" id="img-logo">
                 </div>
             </div>
         </section>
@@ -382,46 +367,39 @@
         
         <div class="gallery-container-fluid">
             <div class="scroller-wrapper">
-                <div class="scroller-item" onclick="openLightbox('bedroom.jpg')">
-                    <img src="bedroom.jpg" alt="Υπνοδωμάτιο" loading="lazy" onerror="this.src='bedroom.jpeg'">
+                <div class="scroller-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="bedroom.jpg" alt="Υπνοδωμάτιο" loading="lazy" class="responsive-img">
                     <div class="gallery-item-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <span data-i18n="g_bedroom">Υπνοδωμάτιο</span>
                     </div>
                 </div>
-                <div class="scroller-item" onclick="openLightbox('dining-lemons.jpg')">
-                    <img src="dining-lemons.jpg" alt="Τραπεζαρία Λεμόνια" loading="lazy" onerror="this.src='dining-lemons.jpeg'">
+                <div class="scroller-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="dining-lemons.jpg" alt="Τραπεζαρία" loading="lazy" class="responsive-img">
                     <div class="gallery-item-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <span data-i18n="g_living">Καθιστικό & Τραπεζαρία</span>
                     </div>
                 </div>
-                <div class="scroller-item" onclick="openLightbox('kitchen.jpg')">
-                    <img src="kitchen.jpg" alt="Κουζίνα" loading="lazy" onerror="this.src='kitchen.jpeg'">
+                <div class="scroller-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="kitchen.jpg" alt="Κουζίνα" loading="lazy" class="responsive-img">
                     <div class="gallery-item-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <span data-i18n="g_kitchen">Πλήρως Εξοπλισμένη Κουζίνα</span>
                     </div>
                 </div>
-                <div class="scroller-item" onclick="openLightbox('bathroom.jpg')">
-                    <img src="bathroom.jpg" alt="Μπάνιο" loading="lazy" onerror="this.src='bathroom.jpeg'">
+                <div class="scroller-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="bathroom.jpg" alt="Μπάνιο" loading="lazy" class="responsive-img">
                     <div class="gallery-item-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <span data-i18n="g_bathroom">Σύγχρονο Μπάνιο</span>
                     </div>
                 </div>
-                <div class="scroller-item" onclick="openLightbox('window-view.jpg')">
-                    <img src="window-view.jpg" alt="Πράσινη Θέα" loading="lazy" onerror="this.src='window-view.jpeg'">
+                <div class="scroller-item" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="window-view.jpg" alt="Πράσινη Θέα" loading="lazy" class="responsive-img">
                     <div class="gallery-item-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                         <span data-i18n="g_view">Θέα από το Παράθυρο</span>
-                    </div>
-                </div>
-                <div class="scroller-item" onclick="openLightbox('table-detail.jpg')">
-                    <img src="table-detail.jpg" alt="Λεπτομέρεια Design" loading="lazy" onerror="this.src='table-detail.jpeg'">
-                    <div class="gallery-item-overlay">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        <span data-i18n="g_details">Minimal Λεπτομέρειες</span>
                     </div>
                 </div>
             </div>
@@ -521,7 +499,7 @@
                 hero_subtitle: "Κομψό και αυτόνομο ισόγειο διαμέρισμα στη Μυτιλήνη",
                 intro_title: "Καλώς <span>Ορίσατε</span>",
                 intro_p1: "Ένας φιλόξενος, κομψός, άνετος και πλήρως ανακαινισμένος χώρος, ιδανικός για ζευγάρια, επαγγελματίες ή μοναχικούς ταξιδιώτες που αναζητούν μια αυθεντική εμπειρία στο κέντρο της πόλης.",
-                intro_p2: "Το διαμέρισμα διαθέτει ένα φωτεινό υπνοδωμάτιο με διπλό κρεβάτι, σύγχρονο μπάνιο με μοντέρνα αισθητική, πλήρως εξοπλισμένη κουζίνα για να ετοιμάσετε το πρωινό ή το αγαηγμένο σας γεύμα και καθιστικό με άνετο καναπέ που μετατρέπεται σε διπλό κρεβάτι.",
+                intro_p2: "Το διαμέρισμα διαθέτει ένα φωτεινό υπνοδωμάτιο με διπλό κρεβάτι, σύγχρονο μπάνιο με μοντέρνα αισθητική, πλήρως εξοπλισμένη κουζίνα για να ετοιμάσετε το πρωινό ή το αγαπημένο σας γεύμα και καθιστικό με άνετο καναπέ που μετατρέπεται σε διπλό κρεβάτι.",
                 amenities_title: "Οι <span>Παροχές Μας</span>",
                 cat_comfort: "Βασικά & Άνεση",
                 a_ac: "Κλιματισμός / Θέρμανση",
@@ -545,7 +523,6 @@
                 g_kitchen: "Πλήρως Εξοπλισμένη Κουζίνα",
                 g_bathroom: "Σύγχρονο Μπάνιο",
                 g_view: "Θέα από το Παράθυρο",
-                g_details: "Minimal Λεπτομέρειες",
                 booking_title: "Διαθεσιμότητα & <span>Κράτηση</span>",
                 f_checkin: "Check-In",
                 f_checkout: "Check-Out",
@@ -599,7 +576,6 @@
                 g_kitchen: "Fully Equipped Kitchen",
                 g_bathroom: "Modern Bathroom",
                 g_view: "Window View",
-                g_details: "Minimal Design Details",
                 booking_title: "Availability & <span>Booking Request</span>",
                 f_checkin: "Check-In",
                 f_checkout: "Check-Out",
@@ -644,13 +620,6 @@
             
             document.getElementById('btn-map-text').innerHTML = `<i class="fa-solid fa-map-location-dot"></i> ${translations[lang]['btn_map']}`;
             document.getElementById('footer-text').innerText = translations[lang]['footer_text'];
-            
-            const phoneInput = document.getElementById('guest-phone');
-            if (lang === 'en') {
-                phoneInput.title = "Please enter numbers only without spaces or letters";
-            } else {
-                phoneInput.title = "Παρακαλώ εισάγετε μόνο αριθμούς χωρίς κενά ή γράμματα";
-            }
         }
 
         function toggleMenu() {
@@ -660,47 +629,50 @@
             if (window.innerWidth <= 968) {
                 hamburger.classList.toggle('active');
                 navMenu.classList.toggle('active');
-                
-                if (navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = 'auto';
-                }
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
             }
+        }
+
+        // Αυτόματο φίλτρο για τις φωτογραφίες (Πεζά / Κεφαλαία)
+        function handleImageFallbacks() {
+            const hero = document.getElementById('hero-section');
+            const bgImg = new Image();
+            bgImg.src = 'bedroom.jpg';
+            bgImg.onerror = function() {
+                hero.style.backgroundImage = "linear-gradient(rgba(58, 61, 50, 0.15), rgba(58, 61, 50, 0.35)), url('bedroom.JPG')";
+            };
+
+            document.querySelectorAll('.responsive-img, #img-logo').forEach(img => {
+                const originalSrc = img.src;
+                img.onerror = function() {
+                    if (originalSrc.endsWith('.jpg')) {
+                        img.src = originalSrc.replace('.jpg', '.JPG');
+                    } else if (originalSrc.endsWith('.JPG')) {
+                        img.src = originalSrc.replace('.JPG', '.jpg');
+                    }
+                };
+            });
         }
 
         const revealElements = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         revealElements.forEach(el => observer.observe(el));
 
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            
             lightboxImg.src = src;
-            lightboxImg.onerror = function() {
-                if(this.src.endsWith('.jpg')) {
-                    this.src = src.replace('.jpg', '.jpeg');
-                }
-            };
-            
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         
         function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.remove('active');
-            if (!document.getElementById('nav-menu').classList.contains('active')) {
-                document.body.style.overflow = 'auto';
-            }
+            document.getElementById('lightbox').classList.remove('active');
+            if (!document.getElementById('nav-menu').classList.contains('active')) document.body.style.overflow = 'auto';
         }
 
         document.addEventListener('keydown', function(e) {
@@ -724,17 +696,14 @@
         function parseiCal(icalText) {
             const lines = icalText.split('\n');
             let currentStart = null;
-
             for (let i = 0; i < lines.length; i++) {
                 const line = lines[i].trim();
                 if (line.startsWith('DTSTART;VALUE=DATE:')) {
                     currentStart = line.split(':')[1];
                 } else if (line.startsWith('DTEND;VALUE=DATE:') && currentStart) {
                     let currentEnd = line.split(':')[1];
-                    
                     let start = new Date(currentStart.replace(/^(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
                     let end = new Date(currentEnd.replace(/^(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
-                    
                     for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
                         bookedDates.push(d.toISOString().split('T')[0]);
                     }
@@ -746,53 +715,28 @@
         function updateCheckoutMin() {
             const checkinInput = document.getElementById('checkin');
             const checkoutInput = document.getElementById('checkout');
-            
             if (checkinInput.value) {
                 const checkinDate = new Date(checkinInput.value);
                 checkinDate.setDate(checkinDate.getDate() + 1);
-                
                 const minCheckoutStr = checkinDate.toISOString().split('T')[0];
                 checkoutInput.min = minCheckoutStr;
-                
-                if (checkoutInput.value && checkoutInput.value < minCheckoutStr) {
-                    checkoutInput.value = "";
-                }
-            } else {
-                const today = new Date().toISOString().split('T')[0];
-                checkoutInput.min = today;
+                if (checkoutInput.value && checkoutInput.value < minCheckoutStr) checkoutInput.value = "";
             }
-        }
-
-        function checkHeroFallback() {
-            const hero = document.getElementById('hero-section');
-            const img = new Image();
-            img.src = 'bedroom.jpg';
-            img.onerror = function() {
-                hero.style.backgroundImage = "linear-gradient(rgba(58, 61, 50, 0.15), rgba(58, 61, 50, 0.35)), url('bedroom.jpeg')";
-            };
         }
 
         function validateDates() {
             const checkinInput = document.getElementById('checkin');
             const checkoutInput = document.getElementById('checkout');
-
-            const checkin = checkinInput.value;
-            const checkout = checkoutInput.value;
-
-            if (checkin && bookedDates.includes(checkin)) {
+            if (checkinInput.value && bookedDates.includes(checkinInput.value)) {
                 alert(translations[currentLang]['alert_checkin']);
                 checkinInput.value = "";
-                updateCheckoutMin();
                 return;
             }
-
-            if (checkin && checkout) {
-                let start = new Date(checkin);
-                let end = new Date(checkout);
-                
+            if (checkinInput.value && checkoutInput.value) {
+                let start = new Date(checkinInput.value);
+                let end = new Date(checkoutInput.value);
                 for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-                    let dateStr = d.toISOString().split('T')[0];
-                    if (bookedDates.includes(dateStr)) {
+                    if (bookedDates.includes(d.toISOString().split('T')[0])) {
                         alert(translations[currentLang]['alert_range']);
                         checkoutInput.value = "";
                         break;
@@ -802,34 +746,26 @@
         }
 
         function submitBooking() {
-            const checkin = document.getElementById('checkin').value;
-            const checkout = document.getElementById('checkout').value;
-            const gName = document.getElementById('guest-name').value;
-            const gEmail = document.getElementById('guest-email').value;
-            const gPhone = document.getElementById('guest-phone').value;
-            
             const btnSubmit = document.getElementById('btn-submit-text');
-
             btnSubmit.innerText = translations[currentLang]['btn_sending'];
             btnSubmit.style.pointerEvents = "none";
             btnSubmit.style.opacity = "0.7";
 
             const templateParams = {
-                guest_name: gName,
-                guest_email: gEmail,
-                guest_phone: gPhone,
-                check_in: checkin,
-                check_out: checkout,
+                guest_name: document.getElementById('guest-name').value,
+                guest_email: document.getElementById('guest-email').value,
+                guest_phone: document.getElementById('guest-phone').value,
+                check_in: document.getElementById('checkin').value,
+                check_out: document.getElementById('checkout').value,
                 owner_email: "cstergianos@gmail.com"
             };
 
             emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
+                .then(function() {
                     openSuccessModal();
                     document.getElementById('booking-form').reset();
-                }, function(error) {
+                }, function() {
                     alert(translations[currentLang]['alert_error']);
-                    console.error("EmailJS Error: ", error);
                 })
                 .finally(function() {
                     btnSubmit.innerText = translations[currentLang]['f_btn'];
@@ -842,7 +778,6 @@
             document.getElementById('modal-success').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
-
         function closeSuccessModal() {
             document.getElementById('modal-success').classList.remove('active');
             document.body.style.overflow = 'auto';
@@ -850,7 +785,7 @@
 
         window.onload = function() {
             fetchAirbnbCalendar();
-            checkHeroFallback();
+            handleImageFallbacks();
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('checkin').min = today;
             document.getElementById('checkout').min = today;
