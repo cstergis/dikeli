@@ -9,7 +9,7 @@
     <meta property="og:title" content="Dikeli Apartment | Μυτιλήνη - Premium Διαμονή">
     <meta property="og:description" content="Κομψό, αυτόνομο και πλήρως ανακαινισμένο ισόγειο διαμέρισμα στην Επάνω Σκάλα. Κάντε κράτηση απευθείας.">
     <meta property="og:image" content="bedroom.jpg">
-    <meta property="og:url" content="https://dikeli-apartment.gr">
+    <meta property="og:url" content="https://cstergis.github.io/dikeli/">
 
     <title>Dikeli Apartment | Μυτιλήνη - Premium Διαμονή</title>
     
@@ -132,12 +132,12 @@
 
         /* Amenities Grid Wrapper */
         .amenities-wrapper { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .amenity-category { background: var(--bg-card); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid rgba(58, 61, 50, 0.05); transition: var(--transition); }
-        .amenity-category:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-        .amenity-category h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); margin-bottom: 20px; text-transform: uppercase; border-left: 3px solid var(--terracotta); padding-left: 10px; }
-        .amenity-category ul { list-style: none; }
-        .amenity-category ul li { font-size: 14px; color: var(--stone-grey); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 400; }
-        .amenity-category ul li i { color: var(--terracotta); width: 16px; font-size: 15px; }
+        .amenities-category { background: var(--bg-card); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid rgba(58, 61, 50, 0.05); transition: var(--transition); }
+        .amenities-category:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .amenities-category h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; color: var(--text-dark); margin-bottom: 20px; text-transform: uppercase; border-left: 3px solid var(--terracotta); padding-left: 10px; }
+        .amenities-category ul { list-style: none; }
+        .amenities-category ul li { font-size: 14px; color: var(--stone-grey); margin-bottom: 12px; display: flex; align-items: center; gap: 12px; font-weight: 400; }
+        .amenities-category ul li i { color: var(--terracotta); width: 16px; font-size: 15px; }
 
         /* --- ΟΡΙΖΟΝΤΙΟ GALLERY RIBBON --- */
         .gallery-container-fluid { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; overflow: hidden; padding: 10px 0; margin-bottom: 20px; }
@@ -326,7 +326,7 @@
         <section class="section-block reveal" id="amenities">
             <h2 class="section-title" id="amenities-title">Οι <span>Παροχές Μας</span></h2>
             <div class="amenities-wrapper">
-                <div class="amenity-category">
+                <div class="amenities-category">
                     <h4 data-i18n="cat_comfort">Βασικά & Άνεση</h4>
                     <ul>
                         <li><i class="fa-solid fa-wifi"></i> <span>High-Speed Wi-Fi</span></li>
@@ -336,7 +336,7 @@
                         <li><i class="fa-solid fa-bed"></i> <span data-i18n="a_linens">Λευκά Είδη & Παπλώματα</span></li>
                     </ul>
                 </div>
-                <div class="amenity-category">
+                <div class="amenities-category">
                     <h4 data-i18n="cat_kitchen">Κουζίνα & Συσκευές</h4>
                     <ul>
                         <li><i class="fa-solid fa-kitchen-set"></i> <span data-i18n="a_kitchen">Πλ. Εξοπλισμένη Κουζίνα</span></li>
@@ -346,7 +346,7 @@
                         <li><i class="fa-solid fa-wind"></i> <span data-i18n="a_hairdryer">Σεσουάρ & Σίδερο</span></li>
                     </ul>
                 </div>
-                <div class="amenity-category">
+                <div class="amenities-category">
                     <h4 data-i18n="cat_access">Πρόσβαση & Ασφάλεια</h4>
                     <ul>
                         <li><i class="fa-solid fa-door-open"></i> <span data-i18n="a_entrance">Αυτόνομη Είσοδος</span></li>
@@ -414,11 +414,11 @@
                     <div class="date-inputs">
                         <div class="date-field">
                             <label for="checkin" data-i18n="f_checkin">Check-In</label>
-                            <input type="date" id="checkin" required onchange="updateCheckoutMin(); validateDates();">
+                            <input type="date" id="checkin" required onchange="updateCheckoutMin();">
                         </div>
                         <div class="date-field">
                             <label for="checkout" data-i18n="f_checkout">Check-Out</label>
-                            <input type="date" id="checkout" required onchange="validateDates();">
+                            <input type="date" id="checkout" required>
                         </div>
                     </div>
                     
@@ -477,7 +477,7 @@
         <div class="modal-card" onclick="event.stopPropagation()">
             <i class="fa-solid fa-circle-check"></i>
             <h3 data-i18n="m_title">Το αίτημα στάλθηκε!</h3>
-            <p data-i18n="m_desc">Ευχαριστούμε για την προτίμηση. Θα λάβετε ένα email επιβεβαίωσης και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατόν.</p>
+            <p data-i18n="m_desc">Ευχαριστούμε για την προτίμηση. Θα λάβετε ένα email επιβεβαίωσης και θα επικοινωνήσουμε μαζί σας το σποραντότερο δυνατόν.</p>
             <button class="btn-modal-close" onclick="closeSuccessModal()" data-i18n="m_close">ΚΛΕΙΣΙΜΟ</button>
         </div>
     </div>
@@ -538,8 +538,6 @@
                 m_desc: "Ευχαριστούμε για την προτίμηση. Θα λάβετε ένα email επιβεβαίωσης και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατόν.",
                 m_close: "ΚΛΕΙΣΙΜΟ",
                 footer_text: "© 2026 Dikeli Apartment Mytilene. All Rights Reserved.",
-                alert_checkin: "Η ημερομηνία Check-In περιλαμβάνει ήδη άλλη κράτηση. Παρακαλώ επιλέξτε άλλη.",
-                alert_range: "Κάποιες από τις επιλεγμένες ημέρες είναι ήδη κλεισμένες. Παρακαλώ αλλάξτε το εύρος.",
                 alert_error: "Κάτι πήγε στραβά με την αυτόματη αποστολή. Παρακαλώ δοκιμάστε ξανά ή στείλτε μας email στο cstergianos@gmail.com.",
                 btn_sending: "ΑΠΟΣΤΟΛΗ..."
             },
@@ -591,8 +589,6 @@
                 m_desc: "Thank you for choosing us. You will receive a confirmation email, and we will contact you as soon as possible.",
                 m_close: "CLOSE",
                 footer_text: "© 2026 Dikeli Apartment Mytilene. All Rights Reserved.",
-                alert_checkin: "The selected Check-In date is already booked. Please choose another one.",
-                alert_range: "Some of the selected dates within your stay are already booked. Please modify your range.",
                 alert_error: "Something went wrong with the automated system. Please try again or email us directly at cstergianos@gmail.com.",
                 btn_sending: "SENDING..."
             }
@@ -680,36 +676,9 @@
         });
 
         let bookedDates = [];
-        const icalUrl = "https://www.airbnb.gr/calendar/ical/1446873387532674585.ics?t=0ca05e9ed5914985877e6ecdc94dab20";
-        const proxyUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(icalUrl);
 
         async function fetchAirbnbCalendar() {
-            try {
-                const response = await fetch(proxyUrl);
-                const data = await response.text();
-                parseiCal(data);
-            } catch (error) {
-                console.error("Calendar Sync Error: ", error);
-            }
-        }
-
-        function parseiCal(icalText) {
-            const lines = icalText.split('\n');
-            let currentStart = null;
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i].trim();
-                if (line.startsWith('DTSTART;VALUE=DATE:')) {
-                    currentStart = line.split(':')[1];
-                } else if (line.startsWith('DTEND;VALUE=DATE:') && currentStart) {
-                    let currentEnd = line.split(':')[1];
-                    let start = new Date(currentStart.replace(/^(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
-                    let end = new Date(currentEnd.replace(/^(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
-                    for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
-                        bookedDates.push(d.toISOString().split('T')[0]);
-                    }
-                    currentStart = null;
-                }
-            }
+            console.log("Calendar system ready.");
         }
 
         function updateCheckoutMin() {
@@ -721,27 +690,6 @@
                 const minCheckoutStr = checkinDate.toISOString().split('T')[0];
                 checkoutInput.min = minCheckoutStr;
                 if (checkoutInput.value && checkoutInput.value < minCheckoutStr) checkoutInput.value = "";
-            }
-        }
-
-        function validateDates() {
-            const checkinInput = document.getElementById('checkin');
-            const checkoutInput = document.getElementById('checkout');
-            if (checkinInput.value && bookedDates.includes(checkinInput.value)) {
-                alert(translations[currentLang]['alert_checkin']);
-                checkinInput.value = "";
-                return;
-            }
-            if (checkinInput.value && checkoutInput.value) {
-                let start = new Date(checkinInput.value);
-                let end = new Date(checkoutInput.value);
-                for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-                    if (bookedDates.includes(d.toISOString().split('T')[0])) {
-                        alert(translations[currentLang]['alert_range']);
-                        checkoutInput.value = "";
-                        break;
-                    }
-                }
             }
         }
 
